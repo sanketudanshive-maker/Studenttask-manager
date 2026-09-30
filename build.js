@@ -2,11 +2,13 @@ const fs = require('fs');
 
 const requiredFiles = [
     'index.html',
+    'style.css',
     'script.js',
-    'style.css'
+    'package.json',
+    'package-lock.json'
 ];
 
-console.log('Starting Student Task Manager build validation...');
+console.log('Starting application build validation...');
 
 for (const file of requiredFiles) {
     if (!fs.existsSync(file)) {
@@ -15,5 +17,5 @@ for (const file of requiredFiles) {
     }
 }
 
-console.log('All required application files are present.');
-console.log('Student Task Manager build completed successfully.');
+console.log('Application files validated successfully.');
+console.log('Build completed successfully.');
